@@ -1,0 +1,35 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+int main() {
+    // Array / vector inicial
+    std::vector<int> numeros = {42, 7, 19, 3, 88, 12, 5};
+
+    // 1. Mostrar array original
+    std::cout << "Original: ";
+    for (int n : numeros) {
+        std::cout << n << " ";
+    }
+    std::cout << "\n\n";
+
+    // 2. Ordenar de menor a mayor (ascendente)
+    std::sort(numeros.begin(), numeros.end());
+
+    std::cout << "De menor a mayor: ";
+    for (int n : numeros) {
+        std::cout << n << " ";
+    }
+    std::cout << "\n";
+
+    // 3. Ordenar de mayor a menor (descendente)
+    std::sort(numeros.begin(), numeros.end(), std::greater<int>());
+
+    std::cout << "De mayor a menor: ";
+    for (int n : numeros) {
+        std::cout << n << " ";
+    }
+    std::cout << "\n";
+
+    return 0;
+}
